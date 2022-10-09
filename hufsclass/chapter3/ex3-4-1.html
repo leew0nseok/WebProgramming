@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+이 HTML 페이지가 로드되자 마자, 자동으로 0.4초 간격으로 한 칸씩 <progress> 엘리먼트에 직업 정도가 진행된다.
+끝까지 차면 다시 처음부터 시작한다. 예제 3-04의 HTML 페이지에 다음과 같이 수정
+	<script> 태그에 자바스크립트 함수 작성
+	<body> 태그에 onload 작성
+	자료 업로딩 문자열 뒤에 <span> 태그 삽입
+	<progress> 태그에 id="progr" 속성 삽입
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>인라인 시맨틱 태그</title>
+    <script>
+      var progress
+      var max
+      var span
+      function start() {
+        span = document.getElementById('span')
+        progress = document.getElementById('prog')
+        max = progress.max
+
+        setInterval('fill()', 400) // 0.4초 간격으로 fill() 함수 호출
+      }
+
+      function fill() {
+        // 호출될 때마다 1칸씩 프로그레서 바를 채움
+        var value = progress.value
+        value += 1
+        value %= max + 1
+        progress.value = value
+        span.innerHTML = value * 10
+      }
+    </script>
+  </head>
+  <body onload="start()">
+    <h3>인라인 시맨틱 태그 사례</h3>
+    <hr />
+    <p>
+      내일 <mark>HTML5 시험</mark><br />
+      시간은 <time>09:00</time><br />
+      난이도 <meter value="0.8">80%</meter><br />
+      자료 업로딩(<span id="span">20</span>%)
+      <progress id="prog" value="2" max="10"></progress><br />
+    </p>
+  </body>
+</html>
