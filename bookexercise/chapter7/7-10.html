@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var bookArray = new Object()
+      bookArray.title = title
+      bookArray.author = author
+      bookArray.price = price
+    </script>
+  </head>
+  <body>
+    <script>
+      var input = []
+      for (var i = 0; i < 5; i++) {
+        input[i] = prompt(',로 분리하면서 책제목 저자 가격 순으로 입력')
+      }
+      for (var i = 0; i < 5; i++) {
+        var infor = input[i].split(',')
+        bookArray[i].title = infor[0]
+        bookArray[i].author = infor[1]
+        bookArray[i].price = infor[2]
+      }
+      for (var i = 0; i < 5; i++) {
+        document.write(
+          bookArray[i].title,
+          bookArray[i].author,
+          bookArray[i].price
+        )
+      }
+    </script>
+  </body>
+</html>
