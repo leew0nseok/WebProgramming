@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function change() {
+      var span = document.getElementById('mySpan')
+      span.style.border = '2px dotted violet'
+    }
+    function pri() {
+      alert('<p>태그의 개수는 ' + document.getElementsByTagName('p').length)
+    }
+  </script>
+  <body>
+    <h3>
+      JS란
+      <button onclick="change()">border</button>
+      <button onclick="pri()">p</button>
+    </h3>
+    <hr />
+    <p>자바스크립트는 동적변경</p>
+    <p><span id="mySpan">C 언어</span>를 알면 이득</p>
+    <p>프로그래밍이 어려움</p>
+  </body>
+</html>

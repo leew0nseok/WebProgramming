@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function addAnswer(obj, text) {
+      var newP = document.createElement('p')
+      newP.innerHTML = text
+      var parent = obj.parentElement
+      parent.appendChild(newP)
+      newP.addEventListener('click', function () {
+        var p = this.parentElement
+        p.removeChild(this)
+      })
+    }
+  </script>
+  <body>
+    <div>
+      <p>Q. 거울아 누가 이쁨?</p>
+      <button onclick="addAnswer(this, '백성공주')">답보기</button>
+    </div>
+    <div>
+      <p>Q. 죽느냐 사느냐</p>
+      <button onclick="addAnswer(this, '둘다')">답보기</button>
+    </div>
+  </body>
+</html>

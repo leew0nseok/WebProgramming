@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function addlist() {
+      var obj = document.getElementById('lli')
+      var newLi = document.createElement('li')
+      var text = prompt('라면 끓이는 순서를 입력')
+      newLi.innerHTML = text
+      obj.appendChild(newLi)
+    }
+  </script>
+  <body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr />
+    <ol
+      id="lli"
+      type="A"
+      style="background-color: yellowgreen"
+      onclick="addlist()"
+    >
+      <li>물</li>
+    </ol>
+  </body>
+</html>

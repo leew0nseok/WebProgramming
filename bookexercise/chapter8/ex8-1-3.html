@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function change(obj) {
+      var doc = document.getElementsByClassName('lli')
+      obj.style.backgroundColor = 'yellowgreen'
+    }
+  </script>
+  <body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr />
+    <ol class="lli" type="A" onclick="change(this)">
+      <li>물</li>
+      <li>스프</li>
+      <li>파</li>
+      <li>eat</li>
+    </ol>
+  </body>
+</html>
